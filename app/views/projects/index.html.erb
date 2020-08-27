@@ -1,0 +1,6 @@
+<% @projects.each do |p| %>
+<div><%= link_to p.title, project_path(p) %></div>
+<div><%= p.description %></div>
+<% end %><br>
+<p><%= link_to "Create New", new_project_path %></p>
+<p><%= link_to "Delete All", destroy_all_path, data: { confirm: 'Are you sure?'} %></p>
